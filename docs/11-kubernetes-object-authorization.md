@@ -1,6 +1,6 @@
-# กำหนดค่า Kubernetes Object Authorization
-ภายใน Kubernetes Cluster เองก็มีการควบคุมการเข้าถึงในแต่ละส่วนด้วยแนวคิด RBAC (Role-Based Access Control) ดังนั้นในการใช้งานจำเป็นต้องกำหนดให้ object ตัวไหน สามารถใช้งาน object ตัวไหนได้บ้าง ในเอกสารนี้จะกำหนดให้ Kubernetes API Server สามารถเข้าถึงข้อมูลบางส่วนของ Kubelet ในบทบาทของ system:kubelet-api-admin
-## กำหนดให้ผู้ใช้ชื่อ kubernetes มีสิทธิ์ในบทบาท system:kubelet-api-admin [master0]
+# ກຳນົດຄ່າ Kubernetes Object Authorization
+ພາຍໃນ Kubernetes Cluster ເອງກໍ່ມີການຄອບຄຸມການເຂົ້າຖິງໃນແຕ່ລະສ່ວນດ້ວຍແນວຄິດ RBAC (Role-Based Access Control) ດັ່ງນັ້ນໃນການໃຊ້ວຽກຈຳເປັນຕ້ອງກຳນົດໃຫ້ object ໂຕໃດ ສາມາດໃຊ້ວຽກ object  ໂຕໃດໄດ້ແນ່ ໃນເອກະສານນີ້ຈະກຳນົດໃຫ້ Kubernetes API Server ສາມາດເຂົ້າເຖິງຂໍ້ມູນບາງສ່ວນຂອງ Kubelet ໃນບົດບາດຂອງ system:kubelet-api-admin
+##  ກຳນົດໃຫ້ຜູ່ໃຊ້ຊື່ kubernetes ມີສິດໃນບົດບາດ  system:kubelet-api-admin [master0]
 ```
 {
 cat <<EOF | kubectl apply --kubeconfig admin.kubeconfig -f -
@@ -19,6 +19,6 @@ subjects:
 EOF
 }
 ```
-**Next>** [สร้าง kubeconfig สำหรับ remote access](12-kubectl-remote-access.md)
+**Next>** [ສ້າງ kubeconfig สำหรับ remote access](12-kubectl-remote-access.md)
 
-**<Prev** [ติดตั้ง Kubernetes Worker Nodes](10-install-worker-node.md)
+**<Prev** [ຕິດຕັ້ງ Kubernetes Worker Nodes](10-install-worker-node.md)
